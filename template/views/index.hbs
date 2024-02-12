@@ -1,0 +1,27 @@
+<!-- index.hbs -->
+<html>
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="search-container">
+        <form action="/" method="GET">
+            <input type="text" name="search" class="search-box" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    {{#if searchData}}
+    <div class="search-results">
+        <h2>Search Results</h2>
+        <ul>
+            {{#each searchData}}
+            <li>Name: {{this.name}}, Age: {{this.age}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+
+</body>
+</html>
